@@ -3,10 +3,9 @@ import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { createBrowserRouter,RouterProvider } from "react-router";
-// import Home from "./components/Home";
-// import Gallery from "./components/Gallery/Gallery";
-// import About from "./components/About/About";
-// import Contact from "./components/Contact/Contact";
+import Login from "../components/login/Login";
+import Register from "../components/register/Register"
+
 
 const router = createBrowserRouter(
     [
@@ -31,6 +30,14 @@ const router = createBrowserRouter(
                     element:""
                 }
             ]
+        },
+        {
+          path:'/login',
+          element: <div className="login_container"><Login/></div> 
+        },
+        {
+          path:'/register',
+          element:<div className="register_container"><Register/></div>
         }
        
     ]

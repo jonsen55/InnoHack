@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react'
 import Navbar from '../components/navbar/Navbar'
-// import "./app.css"
+import "./App.css"
 import { Outlet } from 'react-router'
 
 export const ContextStore = createContext();
@@ -8,7 +8,10 @@ export const ContextStore = createContext();
 const App = () => {
   const [modal,setModal] = useState(false);
   return (
-    <Navbar />
+    <div className="<Navbar />">
+      <Navbar />
+    </div>
+    
  
   )
 }
