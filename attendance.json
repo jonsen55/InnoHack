@@ -1,0 +1,51 @@
+[
+    {
+      "student_email": "manoj@gmail.com",
+      "date": "2025-04-01",
+      "day": "Tuesday",
+      "status": "Present",
+      "timestamp": "2025-04-01T09:02:15",
+      "remarks": ""
+    },
+    {
+      "student_email": "jonsen@gmail.com",
+      "date": "2025-04-01",
+      "day": "Tuesday",
+      "status": "Absent",
+      "timestamp": null,
+      "remarks": "Medical leave"
+    },
+    {
+      "student_email": "anish@gmail.com",
+      "date": "2025-04-01",
+      "day": "Tuesday",
+      "status": "Late",
+      "timestamp": "2025-04-01T09:15:45",
+      "remarks": "Arrived 15 mins late"
+    },
+    {
+      "student_email": "kripa@gmail.com",
+      "date": "2025-04-02",
+      "day": "Wednesday",
+      "status": "Present",
+      "timestamp": "2025-04-02T08:59:33",
+      "remarks": ""
+    },
+    {
+      "student_email": "asmita@gmail.com",
+      "date": "2025-04-02",
+      "day": "Wednesday",
+      "status": "Present",
+      "timestamp": "2025-04-02T09:01:10",
+      "remarks": ""
+    },
+    {
+      "student_email": "koholaa@gmail.com",
+      "date": "2025-04-02",
+      "day": "Wednesday",
+      "status": "Present",
+      "timestamp": "2025-04-02T09:00:45",
+      "remarks": ""
+    }
+  ]
+  
