@@ -1,0 +1,50 @@
+[
+    {
+        "code": "BIT201",
+        "name": "Java Programming",
+        "department": "BIT",
+        "semester": "4th",
+        "teacher": "Dr. Sarah Johnson",
+        "type": "Theory"
+    },
+    {
+        "code": "BIT201L",
+        "name": "Java Programming Lab",
+        "department": "BIT",
+        "semester": "4th",
+        "teacher": "Dr. Sarah Johnson",
+        "type": "Lab"
+    },
+    {
+        "code": "BIT202",
+        "name": "Database Management System (DBMS)",
+        "department": "BIT",
+        "semester": "4th",
+        "teacher": "Mr. James Anderson",
+        "type": "Theory"
+    },
+    {
+        "code": "BIT202L",
+        "name": "DBMS Lab",
+        "department": "BIT",
+        "semester": "4th",
+        "teacher": "Mr. James Anderson",
+        "type": "Lab"
+    },
+    {
+        "code": "BIT203",
+        "name": "Operating System (OS)",
+        "department": "BIT",
+        "semester": "4th",
+        "teacher": "Prof. Mark Lee",
+        "type": "Theory"
+    },
+    {
+        "code": "BIT204",
+        "name": "Scripting Language",
+        "department": "BIT",
+        "semester": "4th",
+        "teacher": "Dr. Sarah Johnson",
+        "type": "Theory"
+    }
+]
