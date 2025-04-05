@@ -1,6 +1,5 @@
 import express from "express";
 import userDetails from "../Database/UserDB.json" with { type: "json" };
-// import directoryDetails from "./../FolderDB.json" with {type:"json"};
 import crypto from "node:crypto";
 import { mkdir, writeFile } from "node:fs/promises";
 
@@ -18,16 +17,7 @@ router.post("/register", async (req, res) => {
             return;
         }
         const id = crypto.randomUUID();
-        const dirId = crypto.randomUUID();
-
-        // directoryDetails.push({
-        //     id:dirId,
-        //     name:`root-${email}`,
-        //     parentId:null,
-        //     userId:id,
-        //     directories:[],
-        //     files:[]
-        // })
+        const dirId = crypto.randomUUID();  
         userDetails.push({
             username,
             email,
@@ -37,9 +27,7 @@ router.post("/register", async (req, res) => {
         })
         console.log(userDetails)
         try{
-            const response =  await writeFile('./UserDB.json', JSON.stringify(userDetails))
-            // const dirResponse =  await writeFile('./FolderDB.json', JSON.stringify(directoryDetails))
-            const dir = await mkdir(`./storage/${dirId}`)
+            const response =  await writeFile('./Database/UserDB.json', JSON.stringify(userDetails))
             res.status(200).json({message:"User Registration Successfull"})
         }catch(err){
             res.status(500).json({error:"Error occured ",message:"error occured !! User Registration Unsuccessfull"})
@@ -76,12 +64,6 @@ router.post("/login", async (req, res) => {
             res.status(404).json({error:"Username or password error"})
             return;
         }
-    //    const userDirectory = directoryDetails.find((dir)=>{
-    //     console.log(dir.name)
-    //         return dir.name == `root-${userObj.email}`
-    //     })
-        // console.log(userDirectory)
-        // `/user/${userObj.id}`})
             res.cookie('uid',userObj.id,{sameSite:'none',secure:true})
             res.status(200).json({message:"User Login Successfull",userId:userObj.id,userDir:userObj.rootDirId})
 

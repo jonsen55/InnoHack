@@ -1,16 +1,9 @@
 [
     {
         "username": "Manoj",
-        "email": "niceme787@gmail.com",
-        "rootDirId": "dcd5ba90-234c-4f74-9842-4dd2bece7edd",
-        "password": "",
-        "id": "fabba028-9b21-4fe5-b7f9-9c34b3806033"
-    },
-    {
-        "username": "user2",
         "email": "manojneupane787@gmail.com",
-        "rootDirId": "80c3aa98-c014-4189-9579-88983d1fde86",
-        "password": "",
-        "id": "87008418-21e2-42ad-945b-61d766b00850"
+        "rootDirId": "97feb03a-8d0d-4a63-9f66-7850eef8122c",
+        "password": "manna",
+        "id": "2c6d6473-bbef-4b89-a33e-a165f29e4ea0"
     }
 ]

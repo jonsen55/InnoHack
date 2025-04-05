@@ -15,7 +15,7 @@ const app = express();
 app.use(cors({origin:'http://localhost:5173',credentials:true}))
 app.use(cookieParser())
 app.use(express.json())
-app.use('/user', checkAuth,UserRoutes)
+app.use('/user',UserRoutes)
 app.use((err,req,res,next)=>{
     res.status(500).json({message:"Something Went Wrong"})
 })
