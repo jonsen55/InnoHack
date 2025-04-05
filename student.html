@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Attendance System</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #34495e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #2980b9;
+    }
+
+    .back-button {
+      background-color: #e74c3c;
+    }
+
+    .profile-info {
+      margin-top: 20px;
+    }
+
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 20px 0;
+      object-fit: cover;
+    }
+
+    .pie-chart-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-button-center {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .class-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .teacher-profile {
+      text-align: center;
+    }
+
+    .teacher-profile p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .teacher-profile img {
+      margin-bottom: 20px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .button-container button {
+      width: 200px;
+      margin: 10px;
+    }
+
+    #attendanceChart {
+      width: 400px !important;
+      height: 400px !important;
+      margin: 0 auto;
+      display: block;
+    }
+
+    h2, .button-container h2 {
+      text-align: center;
+    }
+
+    .class-buttons button, .button {
+      text-align: center;
+    }
+
+    .back-button-center button {
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+<header>Student Attendance System</header>
+
+<div class="container">
+  <div id="student-profile-page">
+    <h2>Student Profile</h2>
+    <div class="teacher-profile">
+      <img src="https://via.placeholder.com/120" alt="Student's Profile Image" class="profile-image">
+      <p class="profile-info"><strong>Name:</strong> Anish Kumal</p>
+      <p class="profile-info"><strong>Email:</strong> anish.kumal@icp.edu.np</p>
+      <p class="profile-info"><strong>Phone:</strong> 9800000001</p>
+      <p class="profile-info"><strong>Group:</strong> c1</p>
+      <p class="profile-info"><strong>Year:</strong> 2</p>
+      <p class="profile-info"><strong>Course:</strong> BIT</p>
+      <div class="button-container">
+        <button class="button" onclick="showAttendance()">View Attendance</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="attendance-view-page" class="hidden">
+    <h2>View Attendance</h2>
+    <div class="class-buttons">
+      <button class="button" onclick="showAttendanceChart('Java')">Java</button>
+      <button class="button" onclick="showAttendanceChart('Python')">Python</button>
+    </div>
+
+    <div class="back-button-center">
+      <button class="button back-button" onclick="backToProfile()">Back to Profile</button>
+    </div>
+  </div>
+
+  <div id="pie-chart-page" class="hidden">
+    <h2 id="class-title"></h2>
+    <div class="pie-chart-container">
+      <canvas id="attendanceChart"></canvas>
+    </div>
+    <div class="back-button-center">
+      <button class="button back-button" onclick="backToAttendanceView()">Back to Attendance View</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const studentAttendance = {
+    "Java": 80,
+    "Python": 70
+  };
+
+  let attendanceChartInstance = null;
+
+  // Function to create a pie chart for attendance
+  function createAttendanceChart(className, attendance) {
+    const ctx = document.getElementById("attendanceChart").getContext('2d');
+    
+    // If a chart exists, destroy it before creating a new one
+    if (attendanceChartInstance) {
+      attendanceChartInstance.destroy();
+    }
+
+    const data = {
+      labels: ['Present', 'Absent'],
+      datasets: [{
+        data: [attendance, 100 - attendance],
+        backgroundColor: ['#2ecc71', '#e74c3c'],
+        borderColor: ['#27ae60', '#c0392b'],
+        borderWidth: 1
+      }]
+    };
+
+    const options = {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        tooltip: {
+          callbacks: {
+            label: function(tooltipItem) {
+              return tooltipItem.raw + '%';
+            }
+          }
+        },
+        datalabels: {
+          formatter: function(value, context) {
+            return value + '%'; // Show the percentage on the chart center
+          },
+          color: '#ffffff',
+          font: {
+            weight: 'bold',
+            size: 16
+          },
+          anchor: 'center',
+          align: 'center'
+        }
+      }
+    };
+
+    // Create a new chart instance
+    attendanceChartInstance = new Chart(ctx, {
+      type: 'pie',
+      data: data,
+      options: options
+    });
+  }
+
+  function switchPage(hideId, showId) {
+    document.getElementById(hideId).classList.add("hidden");
+    document.getElementById(showId).classList.remove("hidden");
+  }
+
+  function showAttendance() {
+    switchPage('student-profile-page', 'attendance-view-page');
+  }
+
+  function showAttendanceChart(className) {
+    const attendance = studentAttendance[className];
+    const classTitle = document.getElementById("class-title");
+    
+    classTitle.textContent = `${className} - Attendance`;
+
+    createAttendanceChart(className, attendance);
+
+    switchPage('attendance-view-page', 'pie-chart-page');
+  }
+
+  function backToProfile() {
+    switchPage('attendance-view-page', 'student-profile-page');
+  }
+
+  function backToAttendanceView() {
+    switchPage('pie-chart-page', 'attendance-view-page');
+  }
+</script>
+
+</body>
+</html>
