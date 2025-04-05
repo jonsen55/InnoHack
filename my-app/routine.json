@@ -1,0 +1,98 @@
+[
+  {
+    "day": "Sunday",
+    "time": "09:00-10:30",
+    "room": "Begnas",
+    "course_type": "NP",
+    "subject": "Software Engineering",
+    "teacher": "Eliza Gautam"
+  },
+  {
+    "day": "Sunday",
+    "time": "11:30-01:00",
+    "room": "Begnas",
+    "course_type": "NP",
+    "subject": "Advanced Programming & Technology",
+    "teacher": "Sandip Adhikari"
+  },
+  {
+    "day": "Monday",
+    "time": "11:30-01:00",
+    "room": "Begnas",
+    "course_type": "NP",
+    "subject": "Smart Data Discovery",
+    "teacher": "Sanijog Hamal"
+  },
+  {
+    "day": "Monday",
+    "time": "01:30-03:00",
+    "room": "Begnas",
+    "course_type": "NP",
+    "subject": "Professional and Ethical Issues",
+    "teacher": "Shailendra Paudel"
+  },
+  {
+    "day": "Tuesday",
+    "time": "07:00-08:30",
+    "room": "Annapurna",
+    "course_type": "NP",
+    "subject": "Software Engineering",
+    "teacher": "Sandeep Gurung"
+  },
+  {
+    "day": "Tuesday",
+    "time": "09:30-11:00",
+    "room": "Machhapuchhre",
+    "course_type": "NP",
+    "subject": "Smart Data Discovery",
+    "teacher": "Sanijog Hamal"
+  },
+  {
+    "day": "Wednesday",
+    "time": "09:00-10:30",
+    "room": "Machhapuchhre",
+    "course_type": "NP",
+    "subject": "Advanced Programming & Technology",
+    "teacher": "Sandip Adhikari"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11:30-01:00",
+    "room": "Annapurna",
+    "course_type": "NP",
+    "subject": "Professional and Ethical Issues",
+    "teacher": "Pratibha Gurung"
+  },
+  {
+    "day": "Thursday",
+    "time": "11:30-01:00",
+    "room": "Rara",
+    "course_type": "NP",
+    "subject": "Software Engineering",
+    "teacher": "Eliza Gautam"
+  },
+  {
+    "day": "Thursday",
+    "time": "01:30-03:00",
+    "room": "Rara",
+    "course_type": "NP",
+    "subject": "Advanced Programming & Technology",
+    "teacher": "Sunil Thapa"
+  },
+  {
+    "day": "Friday",
+    "time": "07:30-09:00",
+    "room": "Thames",
+    "course_type": "UK",
+    "subject": "Professional and Ethical Issues",
+    "teacher": "Shailendra Paudel"
+  },
+  {
+    "day": "Friday",
+    "time": "10:00-11:30",
+    "room": "Fewa",
+    "course_type": "NP",
+    "subject": "Smart Data Discovery",
+    "teacher": "Sanijog Hamal"
+  }
+]

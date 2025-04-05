@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Eliza Gautam",
+    "department": "BIT",
+    "phone": "+977-9812345678",
+    "qualification": "M.Sc. in Software Engineering",
+    "experience_years": 7,
+    "subjects": ["Software Engineering"],
+    "office_room": "CS-203"
+  },
+  {
+    "id": 2,
+    "name": "Sandip Adhikari",
+    "department": "BIT",
+    "phone": "+977-9823456789",
+    "qualification": "M.Tech in Advanced Programming",
+    "experience_years": 10,
+    "subjects": ["Advanced Programming & Technology"],
+    "office_room": "CS-204"
+  },
+  {
+    "id": 3,
+    "name": "Sanijog Hamal",
+    "department": "BIT",
+    "phone": "+977-9834567890",
+    "qualification": "Ph.D. in Data Science",
+    "experience_years": 8,
+    "subjects": ["Smart Data Discovery"],
+    "office_room": "CS-205"
+  },
+  {
+    "id": 4,
+    "name": "Shailendra Paudel",
+    "department": "BIT",
+    "phone": "+977-9845678901",
+    "qualification": "M.Phil. in IT Ethics",
+    "experience_years": 9,
+    "subjects": ["Professional and Ethical Issues"],
+    "office_room": "CS-206"
+  },
+  {
+    "id": 5,
+    "name": "Sandeep Gurung",
+    "department": "BIT",
+    "phone": "+977-9856789012",
+    "qualification": "M.Sc. in Software Engineering",
+    "experience_years": 6,
+    "subjects": ["Software Engineering"],
+    "office_room": "CS-207"
+  },
+  {
+    "id": 6,
+    "name": "Pratibha Gurung",
+    "department": "BIT",
+    "phone": "+977-9867890123",
+    "qualification": "M.A. in IT Ethics",
+    "experience_years": 5,
+    "subjects": ["Professional and Ethical Issues"],
+    "office_room": "CS-208"
+  },
+  {
+    "id": 7,
+    "name": "Sunil Thapa",
+    "department": "BIT",
+    "phone": "+977-9878901234",
+    "qualification": "M.Tech in Programming",
+    "experience_years": 7,
+    "subjects": ["Advanced Programming & Technology"],
+    "office_room": "CS-209"
+  }
+]
